@@ -50,4 +50,28 @@ const student = {
     designation: "Full stack developer at Morgan Stanley",
 };
 
+student["age"] = student["age"] + 1;
+console.log(student["age"])
+
 console.log(student.designation)  // with . we dont need "" but with [] we need "" eg:- student.age["age"]
+
+// if const have object -> then its key can be updated
+
+const product = {
+    title: "ball pen",
+    rating: 4,
+    offer: 5,
+    price: 200,
+}
+
+console.log(product)
+
+// create insta profile object
+
+const profile = {
+    username: "Shivansh Tandon",
+    followers: 400,
+    following: 560,
+    isFollow: false,
+    posts: 11,
+}
