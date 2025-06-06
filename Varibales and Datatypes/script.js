@@ -14,16 +14,18 @@ a = 10;  // variables data can be changed
 
 const discount = 12;  //const data cannot be changed 
 
-// Woh saare features jo JS me nhi hai woh present hai Window me
-// Window is collection of tools jo browser offer krta hai and usko hum JS me use kr sakte hai browser se call krke.
-// example iske console alert prompt
+/* Woh saare features jo JS me nhi hai woh present hai Window me
+Window is collection of tools jo browser offer krta hai and usko hum JS me use kr sakte hai browser se call krke.
+example iske console alert prompt */
+
 fullName = "Shivansh Tandon"
 console.log(fullName)
 
-//Let Const and Var
-// let and const came with ES6 features to solve issues with var
-// let and const are block scope varibales i.e cannot be re-declared. var can be updated. const connot be updated.
-// var is global scope it can be re-declared and updated
+/* Let Const and Var
+let and const came with ES6 features to solve issues with var
+let and const are block scope varibales i.e cannot be re-declared. var can be updated. const connot be updated.
+var is global scope it can be re-declared and updated */
+
 let age = 26;
 // let a; //prints undefined 
 {
@@ -42,8 +44,8 @@ console.log(PI)
 
 // typeof (PI)
 
-// objects arrays functions - non primitve datatypes - mutable(value can be changed)
-//Objects  
+/* objects arrays functions - non primitve datatypes - mutable(value can be changed)
+Objects */
 const student = {
     fullName: "Shivansh Tandon",
     age: 26,
@@ -75,3 +77,4 @@ const profile = {
     isFollow: false,
     posts: 11,
 }
+
