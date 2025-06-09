@@ -60,10 +60,44 @@ for (let i = 0; i <= 100; i++) {
 }
 
 // random game number
-let gameNum = 25
-let userNum = prompt("Guess the correct number")
+// let gameNum = 25
+// let userNum = prompt("Guess the correct number")
 
-while (userNum != gameNum) {
-    userNum = prompt("Guess again")
-}
-console.log("Congratulation u entered right no.")
+// while (userNum != gameNum) {
+//     userNum = prompt("Guess again")
+// }
+// console.log("Congratulation u entered right no.")
+
+/* Strings 
+String is a sequence of characters used to represent text
+
+str.length for String Length
+*/
+
+let str1 = "Shivansh"
+// all Strings have inbuilt properties and aur kuch inbuilt functions hote hai jinhe hum Methods bhi bolte hain
+console.log("length of string is :", str1.length)
+// console.log(str1[5])
+
+// Template literals & String interpolation - A way to have embedded expressions in strings
+console.log(`Character taken out is ${str1[7]}`)
+
+//escape characters
+console.log(`Shivansh \n\t Full Stack Developer`)
+
+// String Methods .toUpperCase() str.trim()- removes whitespaces
+// methods never change the original string value it always returns new value.
+// JS me Strings Immutable hoti hai
+
+// str.slice(start, end?) // returns part of string
+let str2 = "DoGCAt"
+console.log(str2.slice(3, 5))  //end value dena optional hota hai.
+
+// str.replace(searchVal, newVal) , replaceAll()
+console.log(str2.replace("GCA", "gca"))
+
+// Start username with @ with fullname and its fulname length
+
+let fullName = prompt("Enter full name")
+let userName = "@" + fullName + fullName.length
+console.log(userName)
