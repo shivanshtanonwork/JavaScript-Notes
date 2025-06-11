@@ -41,3 +41,114 @@ const countVowels = (str) => {
     }
     console.log(count)
 }
+
+// forEach Loop in Arrays - it is a Method when we associate a function to mehtod then also it becomes method eg:- "abc".toUpperCase()-this to uppercase is method
+
+// forEach haito function hi but voh ek Data strucure jaise Array ke saath judd jaata hai islie voh method hai
+// Methods function hi hote hai associated with Functions and Objects
+
+let arr = [1, 2, 3, 4, 5]
+
+// arr.forEach(function printVal(val) {
+//     console.log(val)
+// })
+
+arr.forEach((val) => {
+    console.log(val)
+})
+
+// forEach hum tab use krte hai jab humko Array ke har ek element ke lie kuch kaam perform karana ho
+
+let coupleName = ["Shivansh", "Vidushi"]
+
+coupleName.forEach((val, idx, coupleName) => {
+    console.log(val.toUpperCase(), idx, coupleName)
+})
+
+// callback function ke paas 3 parameters hote joki optional hote hai
+// value/item , idx/position/ , array
+// forEach can only be used for Arrays not Strings
+
+// forEach - Higher order function/method bhi khelata hai
+//HOF/M - kuch nhi hai bass jo bhi fnx apne andar another fnx as parameter ya return kre another fnx ko.
+
+// array of nos print square of each value
+
+let nos = [1, 2, 3, 99, 4, 5, 6]
+
+nos.forEach((val) => {
+    console.log(val ** 2)  // or val*val will give us same result
+})
+//cube 
+let calCube = (num) => {
+    console.log(num ** 3)
+}
+nos.forEach(calCube)
+
+/* Map - it creates a new Array with the results oof some operation. the value its callback returns is used to form new array
+arr.map(callbackFnx(value, index, array)) - mostlty hum value hi use krte hain
+*/
+
+let newNos = nos.map((val) => {
+    return val
+})
+console.log(newNos)
+
+/* Filter - creates a new array of elements that give true for a conditon/filter
+Eg:- all even elements
+*/
+
+let evenNos = nos.filter((val) => {
+    return val % 2 === 0
+})
+console.log(evenNos)
+
+// yeh humare original array nos ko change nhi krta hai yeh bass ke new copy bana deta hai
+
+/* Reduce - performs some operation and reduces to a single value. It returns that single value
+*/
+// let nos = [1, 2, 3, 4, 5, 6]  //[5,2,4,9,1]
+let output = nos.reduce((prev, curr) => {
+    return prev + curr
+})
+console.log(output)  //21
+
+// largest element nikalte hain
+
+let largest = nos.reduce((prev, curr) => {
+    return prev > curr ? prev : curr
+})
+
+console.log(largest)
+
+// Array of marks of students. Filter out students with 90+ marks
+
+let studMarks = [95, 90, 80, 75, 60, 98]
+
+let toppers = studMarks.filter((val) => {
+    return val > 90;
+})
+
+console.log(toppers)
+
+// take number n as input and create array  from 1 to n. Sum of all nos. and product
+
+let n = prompt("Enter any number")
+
+let numArr = []
+
+for (let i = 1; i <= n; i++) {
+    numArr[i - 1] = i; //1(0), 2(1), 3(2)
+}
+console.log(numArr)
+
+let sum1 = numArr.reduce((prev, curr) => {
+    return prev + curr
+})
+
+console.log(`Sum = ${sum1}`)
+
+let factorial = numArr.reduce((prev, curr) => {
+    return prev * curr
+})
+console.log(`Product = ${factorial}`)
