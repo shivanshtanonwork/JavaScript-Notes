@@ -85,7 +85,7 @@ let calCube = (num) => {
 }
 nos.forEach(calCube)
 
-/* Map - it creates a new Array with the results oof some operation. the value its callback returns is used to form new array
+/* Map - it creates a new Array with the results of some operation. the value its callback returns is used to form new array
 arr.map(callbackFnx(value, index, array)) - mostlty hum value hi use krte hain
 */
 
