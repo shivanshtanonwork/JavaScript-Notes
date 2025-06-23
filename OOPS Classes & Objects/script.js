@@ -135,5 +135,47 @@ let shivanshObj = new Engineer("Shivansh", "Full Stack Developer");
 
 /**
  * Super Keyword -The super keyword is used to call the constructor of its parent's properties and methods
- *
  */
+
+// Practice
+let DATA = "Welcome to College";
+class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  viewData() {
+    console.log(`Data = ${DATA}`);
+  }
+}
+
+let stud1 = new User("shiva", "abc@gmail.com");
+let stud2 = new User("shivansh", "xyz@gmail.com");
+
+class Admin extends User {
+  constructor(name, email) {
+    super(name, email);
+  }
+  editData() {
+    DATA = "Admin editted the data";
+  }
+}
+
+let admin1 = new Admin("admin", "admin@gmail.com");
+admin1.editData();
+
+/**
+ * Error Handling
+ * try-catch
+ */
+let a = 10;
+let b = 5;
+console.log(a + b);
+console.log(a * b);
+try {
+  console.log(a - c); // error
+} catch (error) {
+  console.log(error);
+}
+console.log(a / b);
