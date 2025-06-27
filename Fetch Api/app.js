@@ -10,6 +10,7 @@ const factHeading = document.querySelector("#fact");
 const btn = document.querySelector(".btn");
 
 const getFacts = async () => {
+  //   let response = await fetch(URL); // GET request
   let response = await fetch(URL, {
     method: "POST",
     headers: {
@@ -23,7 +24,8 @@ const getFacts = async () => {
   }); // this is Post request
   console.log(response);
   let data = await response.json();
-  console.log(data);
+  //   console.log(data);
+  //   factHeading.innerHTML = data[0].title; // GET
   factHeading.innerHTML = data.body;
 };
 
