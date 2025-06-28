@@ -37,21 +37,21 @@
  * Callback Hell - nested callbacks
  */
 
-function getData(dataId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("data", dataId);
-      resolve("Success");
-    }, 2000);
-  });
-}
-//async await
-async function getAllData() {
-  await getData(1);
-  await getData(2);
-  await getData(3);
-  await getData(4);
-}
+// function getData(dataId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataId);
+//       resolve("Success");
+//     }, 2000);
+//   });
+// }
+// //async await
+// async function getAllData() {
+//   await getData(1);
+//   await getData(2);
+//   await getData(3);
+//   await getData(4);
+// }
 //Promise Chain
 // getData(1)
 //   .then((res) => {
@@ -154,19 +154,19 @@ async function getAllData() {
  * * await pauses the execution of it surrounding async function until the promise is settled
  */
 
-function api() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("weather data");
-      resolve(200);
-    }, 3000);
-  });
-}
+// function api() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("weather data");
+//       resolve(200);
+//     }, 3000);
+//   });
+// }
 
-async function getWeatherData() {
-  await api();
-  await api();
-}
+// async function getWeatherData() {
+//   await api();
+//   await api();
+// }
 
 /**
  * * IIFE - Immediately invoked function expression
@@ -176,14 +176,35 @@ async function getWeatherData() {
  * syntax - (function)();
  */
 
-(async function () {
-  await api();
-  await api();
-})();
+// (async function () {
+//   await api();
+//   await api();
+// })();
 
-(async function () {
-  await getData(1);
-  await getData(2);
-  await getData(3);
-  await getData(4);
-})();
+// (async function () {
+//   await getData(1);
+//   await getData(2);
+//   await getData(3);
+//   await getData(4);
+// })();
+
+let h1 = document.querySelector("h1");
+
+function changeColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      h1.style.color = color;
+      console.log(`change color to ${color}`);
+      resolve("color changed");
+    }, delay);
+  });
+}
+
+async function demo() {
+  await changeColor("red", 2000);
+  await changeColor("green", 2000);
+  await changeColor("blue", 2000);
+  await changeColor("yellow", 2000);
+}
+
+demo();
