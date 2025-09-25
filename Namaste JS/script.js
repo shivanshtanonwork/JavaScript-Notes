@@ -13,13 +13,30 @@
 // }
 // console.log(a);
 
+// function x() {
+//   var a = 7;
+//   function y() {
+//     console.log(a);
+//   }
+//   return y;
+// }
+// var z = x();
+// console.log(z);
+// z();
 function x() {
-  var a = 7;
-  function y() {
-    console.log(a);
+  //   for (let i = 1; i <= 5; i++) {
+  //     setTimeout(() => {
+  //       console.log(i);
+  //     }, i * 2000);
+  //   }
+  for (var i = 1; i <= 5; i++) {
+    function close(i) {
+      setTimeout(() => {
+        console.log(i);
+      }, i * 1000);
+    }
+    close(i);
   }
-  return y;
+  console.log("Hello");
 }
-var z = x();
-console.log(z);
-z();
+x();
