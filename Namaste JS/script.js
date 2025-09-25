@@ -23,20 +23,35 @@
 // var z = x();
 // console.log(z);
 // z();
-function x() {
-  //   for (let i = 1; i <= 5; i++) {
-  //     setTimeout(() => {
-  //       console.log(i);
-  //     }, i * 2000);
-  //   }
-  for (var i = 1; i <= 5; i++) {
-    function close(i) {
-      setTimeout(() => {
-        console.log(i);
-      }, i * 1000);
+// function x() {
+//   //   for (let i = 1; i <= 5; i++) {
+//   //     setTimeout(() => {
+//   //       console.log(i);
+//   //     }, i * 2000);
+//   //   }
+//   for (var i = 1; i <= 5; i++) {
+//     function close(i) {
+//       setTimeout(() => {
+//         console.log(i);
+//       }, i * 1000);
+//     }
+//     close(i);
+//   }
+//   console.log("Hello");
+// }
+// x();
+function outest() {
+  var c = 20;
+  function outer(b) {
+    let a = 10;
+    function inner() {
+      console.log(a, b, c);
     }
-    close(i);
+    return inner;
   }
-  console.log("Hello");
+  return outer;
 }
-x();
+let a = 100;
+var close = outest()("Hello");
+close();
+// outer()();
