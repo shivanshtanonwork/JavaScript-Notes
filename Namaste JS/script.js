@@ -40,18 +40,39 @@
 //   console.log("Hello");
 // }
 // x();
-function outest() {
-  var c = 20;
-  function outer(b) {
-    let a = 10;
-    function inner() {
-      console.log(a, b, c);
-    }
-    return inner;
-  }
-  return outer;
-}
-let a = 100;
-var close = outest()("Hello");
-close();
+// function outest() {
+//   var c = 20;
+//   function outer(b) {
+//     let a = 10;
+//     function inner() {
+//       console.log(a, b, c);
+//     }
+//     return inner;
+//   }
+//   return outer;
+// }
+// let a = 100;
+// var close = outest()("Hello");
+// close();
 // outer()();
+function Counter() {
+  var counter = 0;
+
+  this.incCounter = function () {
+    counter++;
+    console.log(counter);
+  };
+
+  this.decCounter = function () {
+    counter--;
+    console.log(counter);
+  };
+}
+
+var counter1 = new Counter();
+counter1.incCounter();
+counter1.decCounter();
+// var counter1 = counter();
+// var counter2 = counter();
+// counter1();
+// counter2();
