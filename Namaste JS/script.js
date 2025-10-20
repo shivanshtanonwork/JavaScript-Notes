@@ -54,25 +54,56 @@
 // let a = 100;
 // var close = outest()("Hello");
 // close();
-// outer()();
-function Counter() {
-  var counter = 0;
+// // outer()();
+// function Counter() {
+//   var counter = 0;
 
-  this.incCounter = function () {
-    counter++;
-    console.log(counter);
-  };
+//   this.incCounter = function () {
+//     counter++;
+//     console.log(counter);
+//   };
 
-  this.decCounter = function () {
-    counter--;
-    console.log(counter);
-  };
-}
+//   this.decCounter = function () {
+//     counter--;
+//     console.log(counter);
+//   };
+// }
 
-var counter1 = new Counter();
-counter1.incCounter();
-counter1.decCounter();
+// var counter1 = new Counter();
+// counter1.incCounter();
+// counter1.decCounter();
 // var counter1 = counter();
 // var counter2 = counter();
 // counter1();
 // counter2();
+
+// Function Statement aka Function Declaration
+// function a() {
+//   console.log("a called");
+// }
+
+// Function Expression
+// var b = function () {
+//   console.log("b called");
+// };
+// a();
+// b();
+
+// Anonymous Functions
+// function(){
+
+// }
+
+// Named Function Expression
+
+const radius = [2, 3, 4, 5];
+
+const calculateArea = function (radius) {
+  const output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(Math.PI * radius[i] * radius[i]);
+  }
+  return output;
+};
+
+console.log(calculateArea(radius));
