@@ -36,24 +36,33 @@ data.then((res) => console.log(res));
 
 // demo();
 
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Promise resolved");
-  }, 5000);
-});
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Promise resolved");
-  }, 2000);
-});
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise resolved");
+//   }, 5000);
+// });
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise resolved");
+//   }, 2000);
+// });
+
+// async function handlePromise() {
+//   const val = await p1;
+//   console.log("Hello 1");
+//   console.log(val);
+
+//   const val2 = await p2;
+//   console.log("Hello 2");
+//   console.log(val2);
+// }
+// handlePromise();
+const API_URL = "https://api.github.com/users/shivanshtanonwork";
 
 async function handlePromise() {
-  const val = await p1;
-  console.log("Hello 1");
-  console.log(val);
-
-  const val2 = await p2;
-  console.log("Hello 2");
-  console.log(val2);
+  const data = await fetch(API_URL);
+  const jsonValue = await data.json();
+  console.log(jsonValue);
 }
+
 handlePromise();
